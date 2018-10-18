@@ -1,5 +1,5 @@
 /* https://leetcode.com/problems/valid-parentheses/ 
-@Pedro-Mendes*/
+git@Pedro-Mendes*/
 
 #include<bits/stdc++.h>
 using namespace std;
