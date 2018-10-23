@@ -22,7 +22,6 @@ public:
         
     }
     
-    
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         map<vector<int>,int> hash;
         vector<vector<int>> solution;
@@ -54,3 +53,30 @@ public:
         return res;
     }
 };
+
+/*My improved solution with the above implemented*/
+
+class Solution {
+public:
+    void permute(vector<vector<int>> &solution, vector<int> nums, int index, int size){
+        if(index==size-1){
+            solution.push_back(nums);
+            return;
+        }
+        for(int i=index;i<size;i++){
+            if(i!=index && nums[i]==nums[index])
+                continue;
+            swap(nums[i],nums[index]);
+            permute(solution,nums,index+1,size);
+        }
+    }
+    
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        int size = nums.size();
+        vector<vector<int>> solution;
+        permute(solution,nums,0,size);
+        return solution;
+    }
+};
+
