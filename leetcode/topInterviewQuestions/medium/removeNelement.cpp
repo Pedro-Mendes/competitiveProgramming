@@ -1,5 +1,5 @@
 /* https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/ 
-git@Pedro-Mendes*/
+git@Pedro-Mendes */
 
 /**
  * Definition for singly-linked list.

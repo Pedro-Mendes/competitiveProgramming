@@ -47,6 +47,3 @@ public:
         return minimum;
     }
 };
-
-/* Better yet */
-
