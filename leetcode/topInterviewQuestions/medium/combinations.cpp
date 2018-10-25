@@ -1,3 +1,6 @@
+/* https://leetcode.com/problems/combinations/
+git@Pedro-Mendes */
+
 class Solution {
 public:
     void combination(int index, int n, int k, vector<int> &step, vector<vector<int>> &solution) {
@@ -42,3 +45,4 @@ public:
         return solution;
     }
 };
+

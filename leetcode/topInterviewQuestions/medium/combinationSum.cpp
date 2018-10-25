@@ -1,3 +1,6 @@
+/* https://leetcode.com/problems/combination-sum/
+git@Pedro-Mendes */
+
 class Solution {
 public:
     void combination (int index, const int &n, vector<vector<int>> &solution, const int &target, vector<int> candidates, vector<int> &step, int &sum) {
