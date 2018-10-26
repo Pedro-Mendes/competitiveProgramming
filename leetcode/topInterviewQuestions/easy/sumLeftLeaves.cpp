@@ -1,3 +1,6 @@
+/* https://leetcode.com/problems/sum-of-left-leaves/
+git@Pedro-Mendes */
+
 class Solution {
 public:
     void traverseTree(TreeNode *root, int &sum, int side){
