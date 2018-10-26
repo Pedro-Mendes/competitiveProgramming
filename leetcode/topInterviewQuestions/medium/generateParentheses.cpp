@@ -1,4 +1,5 @@
-
+/* https://leetcode.com/problems/generate-parentheses/
+git@Pedro-Mendes */
 
 /*Very dumb solution (not accepted due time complexity)*/
 class Solution {
@@ -46,6 +47,30 @@ public:
             input+="()";
         map <string,int> mapp;
         permutation(solution,0,2*n,input,mapp);
+        return solution;
+    }
+};
+
+/*Optimization*/
+
+class Solution {
+public:
+    void backtracking(vector<string> &solution, string step, int open, int close, int max){
+        if(step.length()==max*2){
+            solution.push_back(step);
+            return;
+        }
+        if(open<max)
+            backtracking(solution,step+"(",open+1,close,max);
+        if(close<open)
+            backtracking(solution,step+")",open,close+1,max);
+    }
+    
+    
+    vector<string> generateParenthesis(int n) {
+        vector<string> solution;
+        string step="";
+        backtracking(solution,step,0,0,n);
         return solution;
     }
 };
