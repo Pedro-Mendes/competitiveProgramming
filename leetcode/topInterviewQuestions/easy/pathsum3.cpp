@@ -1,4 +1,5 @@
-
+/* https://leetcode.com/problems/path-sum-iii/
+git@Pedro-Mendes */
 class Solution {
 public:
     int pathSum (TreeNode* root, int target) {
@@ -16,10 +17,11 @@ private:
     }
     
     void checkSum (TreeNode* root, int target, int &paths) {
-        if (target == 0)
-            paths++; 
         if (root == nullptr)
             return;
+        if (target - root->val == 0) {
+            paths++;
+        }
         checkSum (root->left, target - root->val, paths);
         checkSum (root->right, target - root->val, paths);
     }
