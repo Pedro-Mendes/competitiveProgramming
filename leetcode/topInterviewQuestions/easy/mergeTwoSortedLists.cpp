@@ -68,24 +68,25 @@ public:
 
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* mergeTwoLists(ListNode* L1, ListNode* L2) {
         ListNode* head = new ListNode(0);
         ListNode* dummy = head;
-        while (l1!=nullptr && l2!=nullptr) {
-            if (l1->val > l2->val) {
-                dummy->next = l2;
+        while (L1 != nullptr && L2!= nullptr) {
+            if (L2->val > L1->val) {
+                dummy->next = L1;
                 dummy = dummy->next;
-                l2 = l2->next;
+                L1 = L1->next;
             } else {
-                dummy->next = l1;
+                dummy->next = L2;
                 dummy = dummy->next;
-                l1 = l1->next;
+                L2 = L2->next;
             }
         }
-        if (l1 == nullptr)
-            dummy->next = l2;
-        if (l2 == nullptr)
-            dummy->next = l1;
+        if (L1 == nullptr) {
+            dummy->next = L2;
+        } else {
+            dummy->next = L1;
+        }
         return head->next;
     }
 };
