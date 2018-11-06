@@ -63,3 +63,29 @@ public:
         return head;
     }
 };
+
+/* Optimized solution O(1) space complexity and O(N) time complexity which N is the number of nodes*/
+
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* head = new ListNode(0);
+        ListNode* dummy = head;
+        while (l1!=nullptr && l2!=nullptr) {
+            if (l1->val > l2->val) {
+                dummy->next = l2;
+                dummy = dummy->next;
+                l2 = l2->next;
+            } else {
+                dummy->next = l1;
+                dummy = dummy->next;
+                l1 = l1->next;
+            }
+        }
+        if (l1 == nullptr)
+            dummy->next = l2;
+        if (l2 == nullptr)
+            dummy->next = l1;
+        return head->next;
+    }
+};
