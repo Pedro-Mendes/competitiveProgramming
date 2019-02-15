@@ -1,3 +1,6 @@
+/*https://leetcode.com/problems/happy-number/
+git@Pedro-Mendes*/
+
 class Solution {
 private:
     bool isHappyCount(int n, unordered_map<int,int> &checked) {
