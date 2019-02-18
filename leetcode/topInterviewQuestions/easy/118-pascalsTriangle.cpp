@@ -1,3 +1,6 @@
+/*https://leetcode.com/problems/pascals-triangle/
+git@Pedro-Mendes*/
+
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
