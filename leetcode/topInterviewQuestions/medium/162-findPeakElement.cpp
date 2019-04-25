@@ -1,8 +1,8 @@
 class Solution {
 private:
     /*If the next number is larger than current, it show an increasing curve, then the peak must in the right half, else in the left half. */
-    /*O(logn) time and space complexity*/
-    int modifiedBinarySearch(vector<int>& nums, int l, int r) {
+    /*O(logn) time and O(1) space complexity*/
+    int modifiedBinarySearch(vector<int>& nums, int& l, int& r) {
         if(l == r)
             return r;
         int mid = l + (r - l)/2, //avoidind overflow
