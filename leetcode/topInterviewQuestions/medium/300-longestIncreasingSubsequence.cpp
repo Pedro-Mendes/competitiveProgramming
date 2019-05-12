@@ -42,13 +42,13 @@ private:
         }
     }
 public:
-    int lengthOfLIS(vector<int>& input) {
+    int lengthOfLIS(vector<int>& input) {                           //input = [4, 1, 3, 2, 9, 24]
         vector<int> solution;
         int size = input.size(),length = 1, indexNextLargerNum,nextVal;
         if (size == 0)
             return 0;
         solution.push_back(0);
-        for(int i = 1; i < size; i++) {
+        for(int i = 1; i < size; i++) {                 //solution = [1,2,9,24]
             if (input[solution[length-1]] < input[i]) {
                 solution.push_back(i);
                 length++;
