@@ -24,5 +24,4 @@ private:
         }
         checkSum (root->left, target - root->val, paths);
         checkSum (root->right, target - root->val, paths);
-    }
-};
+  
